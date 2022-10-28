@@ -15,6 +15,7 @@ export const App = () => {
   });
   return (
     <div className="container">
+      <h1 className="mb-4">Country list</h1>
       <CountryList countries={transformCountries} />
     </div>
   );
