@@ -1,18 +1,10 @@
 import { CountryList } from "./components/CountryList";
 import countries from "./country-data.json";
 import { ICountry } from "./types/types";
+import {getCountries} from "./mappers/countries";
 
 export const App = () => {
-  const transformCountries: ICountry[] = countries.map((country) => {
-    return {
-      name: country.name.common,
-      flag: country.flags.svg,
-      region: country.region,
-      capital: country.capital[0],
-      population: country.population,
-      area: country.area,
-    };
-  });
+  const transformCountries: ICountry[] = getCountries(countries);
   return (
     <div className="container">
       <h1 className="mb-4">Country list</h1>

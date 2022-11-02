@@ -1,5 +1,6 @@
 import { ICountry } from "../types/types";
 import { Badge } from "./Badge";
+import {Color} from "../types/enum";
 interface ICountryItem {
   country: ICountry;
 }
@@ -12,8 +13,8 @@ export const CountryItem = ({
       <p className="m-0 col-2">{name}</p>
       <p className="m-0 col-2">{capital}</p>
       <p className="m-0 col-1">{region}</p>
-      <Badge label={{ name: "area", numbers: area }} />
-      <Badge label={{ name: "population", numbers: population }} />
+      <Badge label={"area"}  count={area} color={Color.Primary}  />
+      <Badge label={"population"}  count={population} color={Color.Secondary} />
     </li>
   );
 };
