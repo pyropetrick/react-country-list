@@ -1,14 +1,14 @@
 import { CountryList } from "./components/CountryList";
 import countries from "./country-data.json";
 import { ICountry } from "./types/types";
-import {getCountries} from "./mappers/countries";
+import { transformCountries } from "./mappers/countries";
 
 export const App = () => {
-  const transformCountries: ICountry[] = getCountries(countries);
+  const transformedCountries: ICountry[] = transformCountries(countries);
   return (
     <div className="container">
       <h1 className="mb-4">Country list</h1>
-      <CountryList countries={transformCountries} />
+      <CountryList countries={transformedCountries} />
     </div>
   );
 };
