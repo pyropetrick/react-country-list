@@ -1,7 +1,7 @@
 import { CountryList } from "./components/CountryList";
 import countries from "./country-data.json";
 import { ICountry } from "./types/types";
-import { transformCountries } from "./mappers/countries";
+import { transformCountries } from "./mappers/transformCountries";
 
 export const App = () => {
   const transformedCountries: ICountry[] = transformCountries(countries);

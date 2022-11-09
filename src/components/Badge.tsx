@@ -9,8 +9,8 @@ interface IProps {
 
 export const Badge = ({ label, count, color }: IProps) => {
   return (
-    <div className={`badge bg-${color} col-2 py-2`}>
+    <span className={`badge bg-${color} col-2 py-2`}>
       {label}: {count}
-    </div>
+    </span>
   );
 };
